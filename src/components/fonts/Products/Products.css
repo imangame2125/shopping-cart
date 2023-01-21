@@ -1,0 +1,79 @@
+.products {
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  flex-wrap: wrap;
+  background-color: orange;
+  border-radius: 5px;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 10px;
+  margin: 40px 20px;
+  background-color: white;
+
+}
+
+.product-image {
+  max-width: 300px;
+  min-height: 200px;
+  display: block;
+  object-fit: cover;
+}
+
+.product-name {
+  text-transform: uppercase;
+  margin: 10px 0px;
+}
+
+.product-price {
+  margin: 10px 0px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.product-add-button {
+  font-weight: 700;
+  font-size: 18px;
+  width: 100%;
+  margin: 15px auto;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  height: 40px;
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+
+}
+
+
+
+.product-add-button:hover {
+  background-image: linear-gradient(to right, #3a080c, #773335, #ba2227, #f7000c);
+  box-shadow: 0 5px 15px #3a080c;
+  background-position: 100% 0;
+  transform: scale(0.7);
+  transition: 1.5s;
+}
+
+.product-add-button:active {
+  width: 100px;
+  transform: translateY(2px);
+  transition: 2s;
+}
+
+.product-add-button:active {
+  transform: translate(5px);
+}

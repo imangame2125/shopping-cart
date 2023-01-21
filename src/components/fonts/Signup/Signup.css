@@ -1,0 +1,12 @@
+.singup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin:  0 auto;
+  background-color: #86c2f3;
+  margin-top: 30px;
+  height: 60vh;
+  font-size: 20px;
+  font-weight: 700;
+}
