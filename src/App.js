@@ -10,10 +10,10 @@ const App = () => {
   const [cartItems, setCartItems] = useState([])
 
   const handleAddProduct = (product) => {
-    const ProductExist = cartItems.find((item) => item.id === product.id);
-    if (ProductExist) {
+    const productExist = cartItems.find((item) => item.id === product.id);
+    if (productExist) {
       setCartItems(cartItems.map((item) => item.id === product.id ?
-        { ...ProductExist, quantity: ProductExist.quantity + 1 } : item)
+        { ...productExist, quantity: productExist.quantity + 1 } : item)
       )
     } else {
       setCartItems([...cartItems, { ...product, quantity: 1 }])
@@ -22,16 +22,16 @@ const App = () => {
   }
 
   const handleRemoveProduct = (product) => {
-    console.log(product);
-    const ProductExist = cartItems.find((item) => item.id === product.id);
+    
+    const productExist = cartItems.find((item) => item.id === product.id);
 
-    if (ProductExist.quantity === 1) {
+    if (productExist.quantity === 1) {
       setCartItems(cartItems.filter((item) => item.id !== product.id))
     } else {
       setCartItems(
         cartItems.map((item) =>
           item.id === product.id
-            ? { ...ProductExist, quantity: ProductExist.quantity - 1 }
+            ? { ...productExist, quantity: productExist.quantity - 1 }
             : item
         )
       )
